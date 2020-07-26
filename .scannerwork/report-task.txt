@@ -1,0 +1,6 @@
+projectKey=Devops1-ui
+serverUrl=http://localhost:9000
+serverVersion=8.4.1.35646
+dashboardUrl=http://localhost:9000/dashboard?id=Devops1-ui
+ceTaskId=AXOLEInzPnolctS28Wk4
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXOLEInzPnolctS28Wk4
