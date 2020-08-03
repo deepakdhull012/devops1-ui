@@ -6,7 +6,7 @@ pipeline {
                 bat 'npm run ng build --prod'
             }
         }
-        stage('build') {
+        stage('test') {
             steps {
                 bat 'npm run ng test'
             }
