@@ -26,7 +26,13 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['ChromeHeadless'],
-    singleRun: false,
-    restartOnFileChange: true
+    singleRun: true,
+    restartOnFileChange: true,
+    thresholds: {
+      statements: 1,
+      lines: 1,
+      branches: 1,
+      functions: 1
+    }
   });
 };
