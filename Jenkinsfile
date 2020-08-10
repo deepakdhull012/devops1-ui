@@ -23,7 +23,7 @@ pipeline {
         }
         stage('docker remove container') {
             steps {
-                bat 'docker stop devops'
+                bat 'docker stop devops && docker rm devops'
             }
         }
         stage('docker deployment') {
