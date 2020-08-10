@@ -21,12 +21,12 @@ pipeline {
                 bat 'docker build ./ -t devops'
             }
         }
-        stage('docker remove container') {
-            steps {
+        // stage('docker remove container') {
+        //     steps {
                 
-                bat 'docker stop devops || true && docker rm devops || true'
-            }
-        }
+        //         bat 'docker stop devops || true && docker rm devops || true'
+        //     }
+        // }
         stage('docker deployment') {
             steps {
                 bat 'docker run --detach --publish 80:80 --name devops devops'
