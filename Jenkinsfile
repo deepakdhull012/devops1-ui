@@ -18,7 +18,7 @@ pipeline {
         }
         stage('docker build') {
             steps {
-                bat 'docker build ./ -t devops${BUILD_NUMBER}'
+                bat 'docker build ./ -t devops'
             }
         }
     }
