@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        dockerfile true
-    }
+    agent any
     stages {
         stage('npm install') {
             steps {
@@ -16,6 +14,11 @@ pipeline {
         stage('test') {
             steps {
                 bat 'npm run ng test'
+            }
+        }
+        stage('docker build') {
+            steps {
+                bat 'docker build ./ -t devops${BUILD_NUMBER}'
             }
         }
     }
