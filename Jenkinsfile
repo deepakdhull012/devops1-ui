@@ -21,5 +21,17 @@ pipeline {
                 bat 'docker build ./ -t devops'
             }
         }
+        stage('docker deployment') {
+            steps {
+                bat 'docker run --detach --publish 80:80 --name devops devops'
+            }
+            
+        }
+        stage('final') {
+            steps {
+                bat 'echo ${BUILD_NUMBER}'
+            }
+            
+        }
     }
 }
