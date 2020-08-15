@@ -13,7 +13,7 @@ pipeline {
         }
         stage('test') {
             steps {
-                bat 'npm run ng test'
+                bat 'npm run ng test && npm run sonar'
             }
         }
         stage('docker build') {
